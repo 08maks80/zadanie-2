@@ -6,7 +6,6 @@ class YaUploader:
         self.token = _token
 
     def upload(self, file_path):
-        """Метод загружает файл file_path на Яндекс.Диск"""
         upload_url = "https://cloud-api.yandex.net/v1/disk/resources/upload"
         filename = file_path.split('/', )[-1]
         headers = {'Content-Type': 'application/json', 'Authorization': 'OAuth {}'.format(self.token)}
